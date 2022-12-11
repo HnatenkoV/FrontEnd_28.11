@@ -61,6 +61,8 @@ console.log(array3);
 //
 // Используя цыкл
 
+console.log('===========task_3============');
+
 const student1 = {
     firstName: 'John',
     'lastName': 'Smith',
