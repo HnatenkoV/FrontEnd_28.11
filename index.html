@@ -75,14 +75,22 @@
     console.log('=============Lesson3============');
 
     // 1) Напишите программу, которая спрашивает у пользователя его имя и выводит в консоли текстовое поздравление.
+    // Happy birthday to you
+    // Happy birthday to you
+    // Happy birthday, dear <name>
+    // Happy birthday to you
 
-    let name = prompt('Enter please your name');
-    if (name) {
-        console.log(`Happy birthday to you\n
-            Happy birthday to you\n
-            Happy birthday, dear ${name}\n
-            Happy birthday to you`);
+    let name = prompt('Enter your name');
+    let str = '';
+    for (let i = 0; i < 4; i++) {
+        if (i === 2) {
+            str += `Happy birthday to you, dear ${name}\n`;
+        }  else {
+            str += "Happy birthday to you\n";
+        }
     }
+    console.log(str);
+
 
     console.log('==================================');
 
