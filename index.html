@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="hw4.js"></script>
+    <script src="hw5.js"></script>
 </head>
 <body>
 <script>
@@ -81,91 +81,91 @@
     // Happy birthday, dear <name>
     // Happy birthday to you
 
-    let name = prompt('Enter your name');
-    let str = '';
-    for (let i = 0; i < 4; i++) {
-        if (i === 2) {
-            str += `Happy birthday to you, dear ${name}\n`;
-        }  else {
-            str += "Happy birthday to you\n";
-        }
-    }
-    console.log(str);
-
-
-    console.log('==================================');
-
-    // 2) Сформируйте строку '.#.#.#.#.#.#.#' с помощью цикла for, где количество повторений символов '.#' задает пользователь через команду prompt().
-
-    let someNumber1 = +prompt('amount .#');
-    let someStr = '';
-    for (let i = 0; i < someNumber1; i++) {
-        someStr += '.#';
-    }
-    console.log(someStr);
-
-    console.log('==================================');
-
-    //     3)Напишите программу, котрая спрашивает у пользователя число и суммирует все нечетные числа, до этого числа.
-    //     Если пользователь не ввел число, вызвать команду prompt() c текстом "Invalid. You should enter a number" и попросить его заново ввести число.
-    //     Результат отобразите в консоли.
+    // let name = prompt('Enter your name');
+    // let str = '';
+    // for (let i = 0; i < 4; i++) {
+    //     if (i === 2) {
+    //         str += `Happy birthday to you, dear ${name}\n`;
+    //     }  else {
+    //         str += "Happy birthday to you\n";
+    //     }
+    // }
+    // console.log(str);
     //
-    let someNumber2 = +prompt('Enter please number');
-    let summ = 0;
-    if (someNumber2 === null) {
-        alert('invalid. You should enter a number');
-        +prompt('Enter please number');
-    } else if (someNumber2 === '') {
-        alert('invalid. You should enter a number');
-        +prompt('Enter please number');
-    }
-    for (let i = 0; i < someNumber2; i++) {
-        if (i % 2 !== 0) {
-            summ += i
-        }
-    }
-    console.log(summ);
-
-    console.log('==================================');
-
-    // 4) Напишите бесконечный цикл, который прерывается при помощи команды break, когда Math.random() > 0.7. Выведите в консоль число, которое прерывает цикл и отобразите количество итераций цикла.
     //
-    let iterations = 0;
-    while (true) {
-        let someRandom = Math.random();
-        iterations++;
-        if (someRandom > 0.7) {
-            console.log(`Loop was finished because of: ${someRandom} \n Number of iterations: ${iterations}`)
-            break;
-        }
-    }
-
-    console.log('==================================');
-
-    // 5) Напишите цикл от 1 до 50, в котором будет выводится поочередно числа от 1 до 50, при этом:
-    //     Если число делится на 3 без остатка, то выводить не это число, а слово 'Div by 3';
-    // Если число делится на 5 без остатка, то выводить не это число, а слово 'Div by 5';
-    // Если число делится и на 3 и на 5, то выводить не это число, а слово 'Div by 5 and 3';
-
-    let someAnswer = 0;
-    for (let i = 1; i <= 50; i++) {
-        someAnswer = ''
-        if (i % 3 === 0) {
-            someAnswer += 'Div by 3'
-        }
-        if (i % 5 === 0) {
-            someAnswer += 'Div by 5'
-        } if (i % 3 === 0 && i % 5 === 0) {
-            someAnswer += 'Div by 5 and 3'
-        }
-        console.log(`${someAnswer === '' ? i : someAnswer}`)
-    }
-
-    console.log('==================================');
-
-    // 6) Вывтдите текущую дату и время, учитывая часовой пояс
-    let date = new Date();
-    console.log(`${date.toString()}`)
+    // console.log('==================================');
+    //
+    // // 2) Сформируйте строку '.#.#.#.#.#.#.#' с помощью цикла for, где количество повторений символов '.#' задает пользователь через команду prompt().
+    //
+    // let someNumber1 = +prompt('amount .#');
+    // let someStr = '';
+    // for (let i = 0; i < someNumber1; i++) {
+    //     someStr += '.#';
+    // }
+    // console.log(someStr);
+    //
+    // console.log('==================================');
+    //
+    // //     3)Напишите программу, котрая спрашивает у пользователя число и суммирует все нечетные числа, до этого числа.
+    // //     Если пользователь не ввел число, вызвать команду prompt() c текстом "Invalid. You should enter a number" и попросить его заново ввести число.
+    // //     Результат отобразите в консоли.
+    // //
+    // let someNumber2 = +prompt('Enter please number');
+    // let summ = 0;
+    // if (someNumber2 === null) {
+    //     alert('invalid. You should enter a number');
+    //     +prompt('Enter please number');
+    // } else if (someNumber2 === '') {
+    //     alert('invalid. You should enter a number');
+    //     +prompt('Enter please number');
+    // }
+    // for (let i = 0; i < someNumber2; i++) {
+    //     if (i % 2 !== 0) {
+    //         summ += i
+    //     }
+    // }
+    // console.log(summ);
+    //
+    // console.log('==================================');
+    //
+    // // 4) Напишите бесконечный цикл, который прерывается при помощи команды break, когда Math.random() > 0.7. Выведите в консоль число, которое прерывает цикл и отобразите количество итераций цикла.
+    // //
+    // let iterations = 0;
+    // while (true) {
+    //     let someRandom = Math.random();
+    //     iterations++;
+    //     if (someRandom > 0.7) {
+    //         console.log(`Loop was finished because of: ${someRandom} \n Number of iterations: ${iterations}`)
+    //         break;
+    //     }
+    // }
+    //
+    // console.log('==================================');
+    //
+    // // 5) Напишите цикл от 1 до 50, в котором будет выводится поочередно числа от 1 до 50, при этом:
+    // //     Если число делится на 3 без остатка, то выводить не это число, а слово 'Div by 3';
+    // // Если число делится на 5 без остатка, то выводить не это число, а слово 'Div by 5';
+    // // Если число делится и на 3 и на 5, то выводить не это число, а слово 'Div by 5 and 3';
+    //
+    // let someAnswer = 0;
+    // for (let i = 1; i <= 50; i++) {
+    //     someAnswer = ''
+    //     if (i % 3 === 0) {
+    //         someAnswer += 'Div by 3'
+    //     }
+    //     if (i % 5 === 0) {
+    //         someAnswer += 'Div by 5'
+    //     } if (i % 3 === 0 && i % 5 === 0) {
+    //         someAnswer += 'Div by 5 and 3'
+    //     }
+    //     console.log(`${someAnswer === '' ? i : someAnswer}`)
+    // }
+    //
+    // console.log('==================================');
+    //
+    // // 6) Вывтдите текущую дату и время, учитывая часовой пояс
+    // let date = new Date();
+    // console.log(`${date.toString()}`)
 
 
 </script>
