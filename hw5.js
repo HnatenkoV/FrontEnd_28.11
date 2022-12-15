@@ -85,7 +85,18 @@ function pipeFunction() {
 }
 
 const make = pipeFunction('some text you like')
-console.log(make('Hello JS'))
+console.log(make('Hello JS'))   /* <-----------первый вариант */
+
+
+function createPipe(decor) {
+    return function (txt) {
+        console.log(`${decor} ${txt} ${decor}`);
+    }
+}
+
+const pipeFunctionNew = createPipe( ' ===== ');
+pipeFunctionNew('some text you like');
+createPipe(); /* <-----------первый вариант */
 
 
 // 5) Создайте функцию, которая принемает 2а аругемнта, текст и функцию для его вывода
