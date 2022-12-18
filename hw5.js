@@ -39,16 +39,14 @@ fillArray(4, 'hello')
 // // result - [1,2, 'qwerty'];
 
 console.log('===============task_2==============');
-
-function filterArray (arr) {
-    return arr.filter(el => el !== false && el !== undefined && el !== '' && el !== 0 && el !== null);
-}
-
 let array = [0, 1, 2, null, undefined, 'qwerty', false];
-console.log(filterArray(array));
 
-let array1 = [15, undefined, 'qwerty', false, 17, '', 24, null];
-console.log(filterArray(array1));
+function filterArray (array, ...args) {
+    args.forEach(arg => array = array.filter(el => el !== arg));
+    return array
+}
+let result = filterArray(array, false, undefined, '', 0, null);
+console.log(result);
 
 // 3) Напишите функцию calcSum, которая вернет сумму всех входящих параметров функции.
 //     let sum1 = calcSum(0); // 0
@@ -104,16 +102,10 @@ createPipe(); /* <-----------первый вариант */
 
 console.log('===============task_5==============');
 
-function showTxt(text) {
-    const someText = 'это какой то текст';
-    if (text === someText) return console.log(text);
-    if (text !== someText) return alert('это не текст');
+function textOutput (text, someFunc) {
+    someFunc (text);
 }
 
-function textOutput(txt, outputFunc) {
-    outputFunc(txt);
-}
-
-textOutput('это какой то текст', showTxt)
-textOutput(null, showTxt)
+textOutput('это какой то текст',txt => console.log(txt));
+textOutput('это какой то текст', txt => alert(txt));
 
