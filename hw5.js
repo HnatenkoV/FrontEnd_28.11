@@ -106,6 +106,6 @@ function textOutput (text, someFunc) {
     someFunc (text);
 }
 
-textOutput('это какой то текст',txt => console.log(txt));
-textOutput('это какой то текст', txt => alert(txt));
+textOutput('это какой то текст',text => console.log(text));
+textOutput('это какой то текст', text => alert(text));
 
