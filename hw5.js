@@ -1,29 +1,9 @@
-// 1) Создайте массив frameworks со значениями: ‘AngularJS’, ‘jQuery’
-// a. Добавьте в начало массива значение ‘Backbone.js’
-// b. Добавьте в конец массива значения ‘ReactJS’ и ‘Vue.js’
-// c. Добавьте в массив значение ‘CommonJS’ вторым элементом
-// d. Найдите и удалите из массива значение ‘jQuery’ и выведите его в консоль со словами “Это здесь лишнее”
-
-
-console.log('===============task_1==============');
-
-let frameworks = ['AngularJS', 'jQuery'];
-frameworks.unshift('Backbone.js');
-console.log(frameworks);
-frameworks.push('ReactJS', 'Vue.js');
-console.log(frameworks);
-frameworks.splice(2, 0, 'CommonJS');
-console.log(frameworks);
-let jQuery = frameworks.findIndex(frameworks=> frameworks===`jQuery`)
-let newFrameworks = frameworks.filter(function(f) { return f !== 'jQuery' });
-console.log(`Это здесь лишнее - ${frameworks[jQuery]}`)
-console.log(newFrameworks);
 
 // Напишите функцию fillArray, которая создает массив и заполняет ее предоставленным значением.
 //     let array = fillArray(10, 'qwerty'), // ['qwerty', 'qwerty', 'qwerty'...]
 //     где 10 - это длинна массива, а 'qwerty' его значения
 
-console.log('===============task_1.1==============');
+console.log('===============task_1==============');
 
 function fillArray(arraySize, value) {
     let arr = Array(arraySize).fill(value);
@@ -47,6 +27,19 @@ function filterArray (array, ...args) {
 }
 let result = filterArray(array, false, undefined, '', 0, null);
 console.log(result);
+
+function filterArray1 (arr, ...args) {
+    for (let i  of arr) {
+        for (let ii of args) {
+            if (args[ii] === arr[i]) {
+                arr.splice(i, 1);
+            }
+        }
+    }
+    return arr;
+}
+
+console.log(filterArray1(array, false, undefined, '', 0, null));
 
 // 3) Напишите функцию calcSum, которая вернет сумму всех входящих параметров функции.
 //     let sum1 = calcSum(0); // 0
