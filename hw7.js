@@ -4,7 +4,7 @@
 // c. Добавьте в массив значение ‘CommonJS’ вторым элементом
 // d. Найдите и удалите из массива значение ‘jQuery’ и выведите его в консоль со словами “Это здесь лишнее”
 
-console.log('===============task_1==============');
+console.log('===============Lesson_7(task_1)==============');
 
 let frameworks = ['AngularJS', 'jQuery'];
 frameworks.unshift('Backbone.js');
