@@ -1,0 +1,23 @@
+.container {
+  padding-top: 200px;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+}
+.content_div {
+    text-align: center;
+}
+button {
+    text-transform:uppercase;
+    padding:10px 40px;
+    background-color: red;
+    color:#fff;
+}
+
+input {
+  padding:10px 40px;
+  border: none;
+  border-bottom: 2px solid red;
+}

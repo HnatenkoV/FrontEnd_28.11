@@ -5,7 +5,7 @@
     let someBoolean = true;
     console.log('value:' + someNumber + ';' + ' ' + 'type:' + typeof someNumber);
     console.log('value:' + someString + ';' + ' ' + 'type:' + typeof someString);
-    console.log('value:' + someBoolean + ';' + ' '  + 'type:' + typeof someBoolean); */
+    console.log('value:' + someBoolean + ';' + ' '  + 'type:' + typeof someBoolean);
 
 /* ===========lesson2============ */
 
